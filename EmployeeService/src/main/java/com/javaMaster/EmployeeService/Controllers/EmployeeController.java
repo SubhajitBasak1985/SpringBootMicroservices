@@ -1,5 +1,6 @@
 package com.javaMaster.EmployeeService.Controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,34 +10,43 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.javaMaster.EmployeeService.Entities.Employee;
+import com.javaMaster.EmployeeService.Services.EmployeeService;
 
 
 @RestController
 @RequestMapping("/Employee")
 public class EmployeeController {
 	
+	private final EmployeeService employeeService;
+	
+	@Autowired
+	public EmployeeController(EmployeeService employeeService) {
+		this.employeeService = employeeService;
+		
+	}
+	
 	@PostMapping("/Add")
 	public Employee addEmployee( @RequestBody Employee employee)
 	{
-		return null;
+		return this.employeeService.addEmployee(employee);
 	}
 	
 	@GetMapping("/GetEmployee/{empId}")
-	public Employee getEmployeeById(@PathVariable Long employeeId)
+	public Employee getEmployeeById(@PathVariable(name="empId") Long employeeId)
 	{
-		return null;
+		return this.employeeService.getEmployee(employeeId);
 	}
 	
 	@PutMapping("/UpdateEmployee/{empId}")
-	public Employee updateEmployee(@PathVariable Long employeeId, Employee employee)
+	public Employee updateEmployee(@PathVariable(name="empId") Long employeeId, @RequestBody Employee employee)
 	{
-		return null;
+		return this.employeeService.updateEmployee(employee, employeeId);
 	}
 	
 	@DeleteMapping("/DeleteEmployee/{empId}")
-	public void addTwoNumber(@PathVariable Long employeeId)
+	public void addTwoNumber(@PathVariable(name="empId") Long employeeId)
 	{
-		
+		this.employeeService.deleteEmployee(employeeId);
 	}
 	
 
