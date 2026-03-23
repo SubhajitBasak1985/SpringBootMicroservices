@@ -1,10 +1,11 @@
-package com.javaMaster.EmployeeService.Services;
+package com.javaMaster.EmployeeServ.Services;
 
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.javaMaster.EmployeeService.Entities.Employee;
-import com.javaMaster.EmployeeService.Repositories.EmployeeRepository;
+
+import com.javaMaster.EmployeeServ.Entities.Employee;
+import com.javaMaster.EmployeeServ.Repositories.EmployeeRepository;
 
 @Service
 public class EmployeeService {

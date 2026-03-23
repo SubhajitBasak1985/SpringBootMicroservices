@@ -1,4 +1,4 @@
-package com.javaMaster.EmployeeService.Controllers;
+package com.javaMaster.EmployeeServ.Controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.javaMaster.EmployeeService.Entities.Employee;
-import com.javaMaster.EmployeeService.Services.EmployeeService;
+
+import com.javaMaster.EmployeeServ.Entities.Employee;
+import com.javaMaster.EmployeeServ.Services.EmployeeService;
 
 
 @RestController

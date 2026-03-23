@@ -1,4 +1,4 @@
-package com.javaMaster.EmployeeService.Entities;
+package com.javaMaster.EmployeeServ.Entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

@@ -1,4 +1,4 @@
-package com.javaMaster.EmployeeService;
+package com.javaMaster.EmployeeServ;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
