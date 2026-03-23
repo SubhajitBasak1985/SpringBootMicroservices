@@ -37,9 +37,13 @@ public class EmployeeService {
 		}
 		else
 		{
+			existingEmployee.setFirstname(employee.getFirstname());
+			existingEmployee.setLastname(employee.getLastname());
+			existingEmployee.setCity(employee.getCity());
+			existingEmployee.setCountry(employee.getCountry());
 			
 		}
-		return this.employeeRepository.save(employee);		
+		return this.employeeRepository.save(existingEmployee);		
 	}
 	
 	public void deleteEmployee(Long employeeId)
